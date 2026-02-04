@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Correct Answer</title>
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      #f7e7b4 0%,
+      #e6c98a 40%,
+      #d2b06f 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  /* subtle desert haze */
+  body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top, rgba(255,255,255,0.25), transparent 60%);
+    pointer-events: none;
+  }
+
+  /* pyramid silhouettes */
+  .pyramids {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40%;
+    background:
+      linear-gradient(120deg, transparent 55%, #c19a5b 56%) left,
+      linear-gradient(60deg, transparent 55%, #b0894f 56%) center,
+      linear-gradient(100deg, transparent 55%, #a87c3a 56%) right;
+    background-size: 33.33% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.35;
+  }
+
+  .box {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    background: rgba(255, 248, 220, 0.9);
+    padding: 55px 65px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  }
+
+  h1 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    color: #9c6b2f;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #4b3a20;
+    margin-bottom: 18px;
+  }
+
+  .signature {
+    margin-top: 30px;
+    font-weight: 600;
+    color: #7a4f1d;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h1>Correct answer! 🏜️❤️</h1>
+
+  <p>
+    Since at the moment we are burdened and challenged with long distance,
+    this Valentine’s Day will be spent online.
+  </p>
+
+  <p>
+    It may seem sad to some, but that’s where me and you grow.
+  </p>
+
+  <p>
+    But nonetheless, we do have an amazing upcoming trip to the deserts,
+    where we will honor this day properly.
+  </p>
+
+  <p class="signature">
+    Love you Joycee,<br>
+    your boy Filipe
+  </p>
+</div>
+
+<div class="pyramids"></div>
+
+</body>
+</html>

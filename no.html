@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Are you sure?</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: white;
+  }
+
+  .rain {
+    position: absolute;
+    width: 2px;
+    height: 80px;
+    background: rgba(255,255,255,0.25);
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(110vh); }
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 1;
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 45px 65px;
+    border-radius: 25px;
+    background: rgba(0,0,0,0.45);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.6);
+    animation: flicker 6s infinite;
+  }
+
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.93; }
+  }
+
+  h1 {
+    font-size: 2.6rem;
+    margin-bottom: 25px;
+  }
+
+  p {
+    opacity: 0.8;
+    margin-bottom: 30px;
+  }
+
+  button {
+    padding: 14px 36px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .nope {
+    background: #111;
+    color: #eee;
+  }
+
+  .back {
+    background: #e63946;
+    color: white;
+  }
+
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  }
+</style>
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<script>
+  for (let i = 0; i < 130; i++) {
+    const drop = document.createElement("div");
+    drop.className = "rain";
+    drop.style.left = Math.random() * 100 + "vw";
+    drop.style.animationDuration = 0.7 + Math.random() * 0.9 + "s";
+    drop.style.animationDelay = Math.random() * 5 + "s";
+    document.body.appendChild(drop);
+  }
+</script>
+
+<div class="content">
+  <h1>Are you sure?</h1>
+  <p>Like… absolutely sure?</p>
+
+  <button class="nope" onclick="location.href='fumble.html'">
+    Absolutely no
+  </button>
+
+  <button class="back" onclick="location.href='Valentines Day Invite.html'">
+    Wanna go back?
+  </button>
+</div>
+
+</body>
+</html>
